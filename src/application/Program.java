@@ -11,11 +11,11 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Department dpt = new Department(2, "Ned");
-		
-		Seller seller = new Seller(19, "Ned", "Nedson.junior91@gmail.com", new Date(), 4000.0, dpt);
-		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		Seller seller = sellerDao.findById(3);
+		
+		System.out.println(seller);
 		
 		
 	}
